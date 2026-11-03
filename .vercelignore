@@ -1,0 +1,7 @@
+.git/
+.vercel/
+.env
+.env.*
+node_modules/
+tmp/
+dist/downloads/

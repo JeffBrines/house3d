@@ -1,0 +1,15 @@
+{
+  "name": "house3d",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "An editable house walkthrough and finish studio you can remix with a coding assistant.",
+  "license": "MIT",
+  "scripts": {
+    "start": "node scripts/serve.mjs",
+    "dev": "node scripts/serve.mjs",
+    "build": "node scripts/package-source.mjs",
+    "test": "node tests/walk-navigation.mjs && node --no-warnings --experimental-loader ./tests/three-loader.mjs tests/house-layout.mjs && node --no-warnings --experimental-loader ./tests/three-loader.mjs tests/finishes.mjs && node --no-warnings --experimental-loader ./tests/three-loader.mjs tests/area-requests.mjs"
+  },
+  "engines": {"node": ">=22"}
+}

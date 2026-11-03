@@ -1,0 +1,12 @@
+import assert from 'node:assert/strict';
+import {wheelWalkDistance,moveOnFloor} from '../dist/walk-navigation.js';
+const wheel=(deltaY,deltaMode=0,extra={})=>wheelWalkDistance({deltaY,deltaMode,...extra},800);
+assert.equal(wheel(-100),.8);assert.equal(wheel(100),-.8);
+assert.equal(wheel(-3,1),wheel(-48));assert.equal(wheel(-1,2),1.5);
+assert.equal(wheel(-100,0,{ctrlKey:true}),0);assert.equal(wheel(-100,0,{metaKey:true}),0);
+const p={x:0,y:5.6,z:0},wall=(x,z)=>x>=1&&x<=1.25;
+moveOnFloor(p,3,0,wall);assert.ok(p.x<1,'Large scroll must not cross thin walls');assert.equal(p.y,5.6);
+moveOnFloor(p,1,1,wall);assert.ok(p.x<1);assert.ok(p.z>.99,'Motion can slide along a wall');
+const q={x:0,y:4.9,z:0};moveOnFloor(q,0,-.8,()=>false);moveOnFloor(q,0,.8,()=>false);assert.ok(Math.abs(q.z)<1e-10);assert.equal(q.y,4.9);
+let transitions=0;moveOnFloor(q,0,-3,()=>false,()=>{if(q.z<-.5){transitions++;return true;}return false;});assert.equal(transitions,1);assert.ok(q.z>-.7,'Stair transition stops old-floor movement');
+console.log('Wheel navigation passed: direction, event units, bounded travel, pinch modifiers, wall blocking/sliding, fixed eye height and stair interruption.');
