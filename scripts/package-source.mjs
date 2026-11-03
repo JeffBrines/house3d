@@ -14,8 +14,11 @@ async function collect(dir){
 }
 for(const dir of ['dist','scripts','tests'])await collect(dir);
 for(const name of ['README.md','AGENTS.md','LICENSE','THIRD-PARTY-NOTICES.md','package.json','vercel.json'])files[name]=await readFile(name);
-files['.gitignore']=await readFile('.gitignore');
-files['.vercelignore']=await readFile('.vercelignore');
+// Vercel may omit these control files from its remote build workspace.
+const ignores={'.gitignore':'.DS_Store\n.env\n.env.*\n.vercel/\nnode_modules/\ntmp/\ndist/downloads/\n','.vercelignore':'.git/\n.vercel/\n.env\n.env.*\nnode_modules/\ntmp/\ndist/downloads/\n'};
+for(const [path,fallback] of Object.entries(ignores)){
+  try{files[path]=await readFile(path);}catch(error){if(error.code!=='ENOENT')throw error;files[path]=new TextEncoder().encode(fallback);}
+}
 const hashes=Object.fromEntries(Object.keys(files).sort().map(p=>[p,createHash('sha256').update(files[p]).digest('hex')]));
 files['SOURCE-MANIFEST.json']=new TextEncoder().encode(JSON.stringify({format:'house3d-source/v1',files:hashes},null,2)+'\n');
 const zip=zipFiles(Object.fromEntries(Object.keys(files).sort().map(p=>['house3d/'+p,files[p]])));
