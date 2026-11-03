@@ -37,9 +37,21 @@ Libraries and textures are bundled locally.
 Code edits in this folder cannot alter the original hosted site. A GitHub fork
 is your own repository; changes reach the original only if its owner accepts them.
 
+## Find your way around
+
+- **Explore:** choose a floor, room or saved view.
+- **Finishes:** open a material category to compare paint, wood, tile, cabinetry or fixtures.
+- **Edit:** choose furniture, kitchen cabinetry, bathroom cabinetry or light fixtures.
+- **Project:** export/import layouts, switch plan versions, and review drawings or studies.
+
+The house toolbar contains **Circle an area**, **Measure**, **View** and **Map**.
+View holds ceilings, cutaways, realistic lighting, quality and exposure.
+On phones, the bottom dock opens the same studio sections; **Back to house**
+closes the drawer.
+
 ## Bring the finishes you already tried
 
-On the hosted site, click **Export layout** (also available from **Get your own
+On the hosted site, click **Project → Export layout** (also available from **Get your own
 copy → Save my current layout**). Import that JSON into your local app. It includes
 all three designs, both floors, furniture, fixtures and finish choices.
 
@@ -52,7 +64,8 @@ locally: attach the marked PNG or request ZIP to your assistant's conversation.
 
 | Files in `dist/` | What they control |
 | --- | --- |
-| `app.js`, `index.html`, `style.css`, `mobile.css` | Scene, navigation, interface, layout import/export |
+| `app.js`, `index.html` | Scene, interface, layout import/export |
+| `navigation-ui.js`, `navigation.css`, `mobile-ui.js` | Studio sections, finish categories, scene toolbar and phone drawer |
 | `revision-*-model.json`, `revision-config.js` | Current main-floor/basement walls, rooms and fixtures |
 | `model.json`, `basement-model.json`, `expanded-suite-model.json`, `suite-*.js` | Earlier designs and comparison |
 | `house-layout.js`, `house-furniture.js`, `dining-furniture.js` | Furniture arrangement and geometry |

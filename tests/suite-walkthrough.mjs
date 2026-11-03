@@ -8,7 +8,7 @@ import {fileURLToPath,pathToFileURL} from 'node:url';
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..'),dist=path.join(root,'dist');
 const nodes=new Map(),storage=new Map();
 const context=new Proxy({createImageData:(w,h)=>({data:new Uint8ClampedArray(w*h*4)})},{get:(o,k)=>k in o?o[k]:(()=>{})});
-function node(){return {options:[{},{}],textContent:'',value:'',hidden:false,clientWidth:1200,clientHeight:800,children:[],classList:{add(){},remove(){},toggle(){}},append(...x){this.children.push(...x);},replaceChildren(...x){this.children=x;},getContext:()=>context};}
+function node(){return {options:[{},{}],textContent:'',value:'',hidden:false,clientWidth:1200,clientHeight:800,children:[],attributes:{},setAttribute(k,v){this.attributes[k]=String(v);},classList:{add(){},remove(){},toggle(){}},append(...x){this.children.push(...x);},replaceChildren(...x){this.children=x;},getContext:()=>context};}
 globalThis.document={createElement:node,createTextNode:t=>({textContent:t}),getElementById:id=>{if(!nodes.has(id))nodes.set(id,node());return nodes.get(id);},querySelectorAll:()=>[],querySelector:()=>null,body:{classList:{add(){},remove(){}}}};
 globalThis.localStorage={getItem:k=>storage.get(k)||null,setItem:(k,v)=>storage.set(k,v)};
 const temporary=fs.mkdtempSync(path.join(os.tmpdir(),'brines-suite-test-'));
