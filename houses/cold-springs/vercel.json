@@ -1,0 +1,11 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": null,
+  "buildCommand": "npm run build",
+  "installCommand": "node -e \"console.log('No dependencies to install')\"",
+  "outputDirectory": "dist",
+  "headers": [
+    {"source": "/(.*)", "headers": [{"key":"X-Content-Type-Options","value":"nosniff"},{"key":"Referrer-Policy","value":"strict-origin-when-cross-origin"}]},
+    {"source": "/downloads/cold-springs-source.zip", "headers": [{"key":"Content-Disposition","value":"attachment; filename=cold-springs-source.zip"},{"key":"Cache-Control","value":"public, max-age=0, must-revalidate"}]}
+  ]
+}

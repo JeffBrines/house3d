@@ -7,6 +7,13 @@ to a coding assistant. The source is here so you can make your own version.
 **[Source repository](https://github.com/JeffBrines/house3d)** ·
 **[Download source](https://github.com/JeffBrines/house3d/archive/refs/heads/main.zip)**
 
+## Additional house projects
+
+[Cold Springs](https://github.com/JeffBrines/house3d/tree/main/houses/cold-springs)
+is an independent single-level walkthrough with its own Vercel project, source
+download, model and browser settings. See its README for hosting and handoff.
+The root application and its source download continue to describe this house.
+
 ## Run your copy
 
 Download and unzip, open the folder in your coding assistant, and run:

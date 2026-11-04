@@ -1,0 +1,7 @@
+// Dependency-free ZIP store format: one user action downloads the complete set.
+const crcTable=Array.from({length:256},(_,i)=>{let c=i;for(let n=0;n<8;n++)c=c&1?0xedb88320^(c>>>1):c>>>1;return c>>>0;});
+function crc32(bytes){let c=0xffffffff;for(const b of bytes)c=crcTable[(c^b)&255]^(c>>>8);return (c^0xffffffff)>>>0;}
+export function zipFiles(files){const encoder=new TextEncoder(),locals=[],central=[];let offset=0;const header=(n,values)=>{const bytes=new Uint8Array(n),v=new DataView(bytes.buffer);for(const [o,value,size] of values)size===2?v.setUint16(o,value,true):v.setUint32(o,value,true);return bytes;};
+ for(const [name,content] of Object.entries(files)){const filename=encoder.encode(name),data=content instanceof Uint8Array?content:encoder.encode(content),crc=crc32(data),local=header(30,[[0,0x04034b50,4],[4,20,2],[6,0x800,2],[12,33,2],[14,crc,4],[18,data.length,4],[22,data.length,4],[26,filename.length,2]]);locals.push(local,filename,data);central.push(header(46,[[0,0x02014b50,4],[4,20,2],[6,20,2],[8,0x800,2],[14,33,2],[16,crc,4],[20,data.length,4],[24,data.length,4],[28,filename.length,2],[42,offset,4]]),filename);offset+=local.length+filename.length+data.length;}
+ const centralSize=central.reduce((n,b)=>n+b.length,0),end=header(22,[[0,0x06054b50,4],[8,Object.keys(files).length,2],[10,Object.keys(files).length,2],[12,centralSize,4],[16,offset,4]]),parts=[...locals,...central,end],result=new Uint8Array(offset+centralSize+22);let cursor=0;for(const part of parts){result.set(part,cursor);cursor+=part.length;}return result;
+}
