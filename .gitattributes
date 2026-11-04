@@ -1,0 +1,3 @@
+houses/cold-springs/dist/assets/*.js linguist-vendored=true -whitespace
+houses/cold-springs/dist/assets/three-addons/** linguist-vendored=true -whitespace
+houses/cold-springs/dist/assets/model-plan.svg linguist-generated=true

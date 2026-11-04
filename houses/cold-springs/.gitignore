@@ -1,0 +1,9 @@
+tmp/
+source-plans/
+.DS_Store
+node_modules/
+dist/downloads/
+.env
+.env.*
+.openai/
+.vercel/

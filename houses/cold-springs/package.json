@@ -1,0 +1,13 @@
+{
+  "name": "cold-springs-house",
+  "private": true,
+  "type": "module",
+  "license": "MIT",
+  "engines": {"node": ">=22"},
+  "scripts": {
+    "start": "node scripts/serve.mjs",
+    "test": "node tests/model.mjs && node tests/distribution.mjs",
+    "build": "node scripts/package.mjs",
+    "package": "node scripts/package.mjs"
+  }
+}

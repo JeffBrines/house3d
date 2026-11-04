@@ -1,0 +1,11 @@
+.git/
+.env
+.env.*
+.openai/
+.vercel/
+node_modules/
+source-plans/
+tmp/
+dist/downloads/
+**/*.pdf
+**/floor-plan.png
