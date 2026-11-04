@@ -5,9 +5,9 @@ import {EffectComposer} from './assets/three-addons/postprocessing/EffectCompose
 import {RenderPass} from './assets/three-addons/postprocessing/RenderPass.js';
 import {SSAOPass} from './assets/three-addons/postprocessing/SSAOPass.js';
 import {OutputPass} from './assets/three-addons/postprocessing/OutputPass.js';
-import {buildHouse} from './geometry.js';
-import {rooms,furniture,defaults,STORAGE_KEY,validSettings,PROJECT_ID} from './project.js';
-import {makeCollision,groundHeight} from './spatial.js';
+import {buildHouse} from './geometry.js?v=dimensions-2';
+import {rooms,furniture,defaults,STORAGE_KEY,validSettings,PROJECT_ID} from './project.js?v=dimensions-2';
+import {makeCollision,groundHeight} from './spatial.js?v=dimensions-2';
 import {wheelWalkDistance,moveOnFloor} from './walk-navigation.js';
 
 const $=id=>document.getElementById(id),wrap=$('canvasWrap');
@@ -42,7 +42,7 @@ function displayMode(){
  $('touchControls').hidden=!(mode==='walk'&&compact());
  $('walkHelp').hidden=mode!=='walk'||helpSeen()||compact();
  $('viewDescription').textContent=mode==='walk'?(compact()?'Drag to look · Hold the arrows to move':'Drag to look · W A S D or arrows to move'):mode==='plan'?'Scroll to zoom · Click the map to enter a room':'Drag to orbit · Scroll to zoom';
- if(exterior)$('viewDescription').textContent='Drag to orbit · Scroll to zoom';
+ if(exterior)$('viewDescription').textContent='Roof envelope provisional · Drag to orbit';
  renderer.shadowMap.needsUpdate=true;drawMap();
 }
 function resetOrbit(plan=false){
@@ -101,7 +101,7 @@ function bind(){
 }
 function resize(){if(!renderer)return;const w=wrap.clientWidth,h=wrap.clientHeight;renderer.setSize(w,h,false);composer?.setSize(w,h);camera.aspect=w/h;if(mode==='walk')camera.fov=compact()?82:65;camera.updateProjectionMatrix();$('touchControls').hidden=!(mode==='walk'&&compact());}
 async function init(){
- const res=await fetch('./model.json');if(!res.ok)throw Error('The house model could not be loaded.');model=await res.json();
+ const res=await fetch('./model.json?v=dimensions-2');if(!res.ok)throw Error('The house model could not be loaded.');model=await res.json();
  renderer=new THREE.WebGLRenderer({antialias:true,alpha:false,preserveDrawingBuffer:true});renderer.setPixelRatio(Math.min(devicePixelRatio,1.5));renderer.shadowMap.enabled=true;renderer.shadowMap.autoUpdate=false;renderer.shadowMap.type=THREE.PCFShadowMap;renderer.localClippingEnabled=true;renderer.toneMapping=THREE.ACESFilmicToneMapping;wrap.append(renderer.domElement);
  scene=new THREE.Scene();scene.background=new THREE.Color('#e1e6dc');scene.fog=new THREE.Fog('#e1e6dc',180,420);
  camera=new THREE.PerspectiveCamera(44,1,.08,600);controls=new OrbitControls(camera,renderer.domElement);controls.enableDamping=true;controls.dampingFactor=.08;controls.minDistance=14;controls.maxDistance=200;controls.target.set(36,0,34);controls.addEventListener('change',drawMap);

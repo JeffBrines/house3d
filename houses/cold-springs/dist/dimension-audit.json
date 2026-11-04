@@ -1,0 +1,838 @@
+{
+  "source": "Architectural Rev 1, October 28 2026, A-1 page 3",
+  "datum": "Framing faces. Nominal unit tags are not rough openings or installed clearances.",
+  "toleranceInches": 0.125,
+  "spans": [
+    {
+      "name": "Primary bedroom width",
+      "axis": "x",
+      "x": 15,
+      "z": 8,
+      "inches": 169,
+      "actualInches": 169.00000008,
+      "from": 7.45833333,
+      "to": 21.54166667,
+      "pass": true
+    },
+    {
+      "name": "Primary bedroom depth",
+      "axis": "z",
+      "x": 16,
+      "z": 9,
+      "inches": 218.5,
+      "actualInches": 218.50000004000003,
+      "from": 0.4583333333333333,
+      "to": 18.66666667,
+      "pass": true
+    },
+    {
+      "name": "Rear closet width",
+      "axis": "x",
+      "x": 5,
+      "z": 12,
+      "inches": 68.5,
+      "actualInches": 68.50000007999999,
+      "from": 1.45833333,
+      "to": 7.16666667,
+      "pass": true
+    },
+    {
+      "name": "Rear closet depth",
+      "axis": "z",
+      "x": 3,
+      "z": 12,
+      "inches": 63,
+      "actualInches": 63,
+      "from": 9.95833333,
+      "to": 15.20833333,
+      "pass": true
+    },
+    {
+      "name": "Primary bath width",
+      "axis": "x",
+      "x": 4,
+      "z": 22,
+      "inches": 97,
+      "actualInches": 97.00000007999999,
+      "from": 0.45833333,
+      "to": 8.54166667,
+      "pass": true
+    },
+    {
+      "name": "Primary bath depth",
+      "axis": "z",
+      "x": 3,
+      "z": 26,
+      "inches": 175,
+      "actualInches": 175.00000008,
+      "from": 18.95833333,
+      "to": 33.54166667,
+      "pass": true
+    },
+    {
+      "name": "Primary WC width",
+      "axis": "x",
+      "x": 10,
+      "z": 21,
+      "inches": 39,
+      "actualInches": 39,
+      "from": 8.83333333,
+      "to": 12.08333333,
+      "pass": true
+    },
+    {
+      "name": "Primary WC depth",
+      "axis": "z",
+      "x": 10,
+      "z": 21,
+      "inches": 54,
+      "actualInches": 54,
+      "from": 19.125,
+      "to": 23.625,
+      "pass": true
+    },
+    {
+      "name": "Dressing width",
+      "axis": "x",
+      "x": 14,
+      "z": 22,
+      "inches": 63,
+      "actualInches": 63,
+      "from": 12.375,
+      "to": 17.625,
+      "pass": true
+    },
+    {
+      "name": "Dressing depth",
+      "axis": "z",
+      "x": 14,
+      "z": 22,
+      "inches": 74.5,
+      "actualInches": 74.50000004000003,
+      "from": 18.958333333333332,
+      "to": 25.16666667,
+      "pass": true
+    },
+    {
+      "name": "Primary shower depth",
+      "axis": "z",
+      "x": 14,
+      "z": 27,
+      "inches": 66,
+      "actualInches": 66,
+      "from": 25.45833333,
+      "to": 30.95833333,
+      "pass": true
+    },
+    {
+      "name": "Powder width",
+      "axis": "x",
+      "x": 11,
+      "z": 33,
+      "inches": 72.5,
+      "actualInches": 72.5,
+      "from": 7.75,
+      "to": 13.791666666666666,
+      "pass": true
+    },
+    {
+      "name": "Powder depth",
+      "axis": "z",
+      "x": 11,
+      "z": 34,
+      "inches": 69,
+      "actualInches": 69,
+      "from": 31.25,
+      "to": 37,
+      "pass": true
+    },
+    {
+      "name": "Laundry width",
+      "axis": "x",
+      "x": 8,
+      "z": 39,
+      "inches": 140,
+      "actualInches": 140.00000004,
+      "from": 2.125,
+      "to": 13.79166667,
+      "pass": true
+    },
+    {
+      "name": "Laundry depth",
+      "axis": "z",
+      "x": 6,
+      "z": 40,
+      "inches": 116.5,
+      "actualInches": 116.49999996000003,
+      "from": 34,
+      "to": 43.70833333,
+      "pass": true
+    },
+    {
+      "name": "Laundry closet width",
+      "axis": "x",
+      "x": 15,
+      "z": 37.5,
+      "inches": 26,
+      "actualInches": 26.000000039999996,
+      "from": 14.08333333,
+      "to": 16.25,
+      "pass": true
+    },
+    {
+      "name": "Laundry closet depth",
+      "axis": "z",
+      "x": 15,
+      "z": 37.5,
+      "inches": 57.75,
+      "actualInches": 57.75,
+      "from": 35.08333333,
+      "to": 39.89583333,
+      "pass": true
+    },
+    {
+      "name": "Pantry width",
+      "axis": "x",
+      "x": 28,
+      "z": 34,
+      "inches": 138,
+      "actualInches": 138.00000000000006,
+      "from": 21.83333333,
+      "to": 33.33333333,
+      "pass": true
+    },
+    {
+      "name": "Pantry depth",
+      "axis": "z",
+      "x": 28,
+      "z": 34,
+      "inches": 65.5,
+      "actualInches": 65.49999996000003,
+      "from": 31.875,
+      "to": 37.33333333,
+      "pass": true
+    },
+    {
+      "name": "Office width",
+      "axis": "x",
+      "x": 39,
+      "z": 40,
+      "inches": 149,
+      "actualInches": 149.00000003999997,
+      "from": 33.625,
+      "to": 46.04166667,
+      "pass": true
+    },
+    {
+      "name": "Office depth",
+      "axis": "z",
+      "x": 40,
+      "z": 37,
+      "inches": 171.5,
+      "actualInches": 171.50000000000006,
+      "from": 29.416666666666664,
+      "to": 43.708333333333336,
+      "pass": true
+    },
+    {
+      "name": "Breakfast width",
+      "axis": "x",
+      "x": 28,
+      "z": 5,
+      "inches": 158.5,
+      "actualInches": 158.5000000400001,
+      "from": 21.83333333,
+      "to": 35.04166666666667,
+      "pass": true
+    },
+    {
+      "name": "Great room depth",
+      "axis": "z",
+      "x": 42,
+      "z": 20,
+      "inches": 230,
+      "actualInches": 230,
+      "from": 9.958333333333332,
+      "to": 29.125,
+      "pass": true
+    },
+    {
+      "name": "Bedroom 2 width",
+      "axis": "x",
+      "x": 68,
+      "z": 7,
+      "inches": 157.5,
+      "actualInches": 157.49999996,
+      "from": 61.083333333333336,
+      "to": 74.20833333,
+      "pass": true
+    },
+    {
+      "name": "Bedroom 2 depth",
+      "axis": "z",
+      "x": 68,
+      "z": 7,
+      "inches": 152,
+      "actualInches": 152,
+      "from": 0.4583333333333333,
+      "to": 13.125,
+      "pass": true
+    },
+    {
+      "name": "Bedroom 2 closet depth",
+      "axis": "z",
+      "x": 59.5,
+      "z": 5,
+      "inches": 110.5,
+      "actualInches": 110.50000007999999,
+      "from": 0.45833333,
+      "to": 9.66666667,
+      "pass": true
+    },
+    {
+      "name": "Bedroom 2 closet width",
+      "axis": "x",
+      "x": 59.5,
+      "z": 5,
+      "inches": 26,
+      "actualInches": 25.99999999999997,
+      "from": 58.625,
+      "to": 60.791666666666664,
+      "pass": true
+    },
+    {
+      "name": "Bath 2 width",
+      "axis": "x",
+      "x": 66,
+      "z": 16,
+      "inches": 142,
+      "actualInches": 141.99999999999994,
+      "from": 63.375,
+      "to": 75.20833333333333,
+      "pass": true
+    },
+    {
+      "name": "Bath 2 depth",
+      "axis": "z",
+      "x": 67,
+      "z": 16,
+      "inches": 60,
+      "actualInches": 60.00000000000002,
+      "from": 13.41666667,
+      "to": 18.41666667,
+      "pass": true
+    },
+    {
+      "name": "Bath 3 width",
+      "axis": "x",
+      "x": 66,
+      "z": 21,
+      "inches": 142,
+      "actualInches": 141.99999999999994,
+      "from": 63.375,
+      "to": 75.20833333333333,
+      "pass": true
+    },
+    {
+      "name": "Bath 3 depth",
+      "axis": "z",
+      "x": 67,
+      "z": 21,
+      "inches": 60,
+      "actualInches": 60,
+      "from": 18.875,
+      "to": 23.875,
+      "pass": true
+    },
+    {
+      "name": "Bedroom 3 width",
+      "axis": "x",
+      "x": 67,
+      "z": 33,
+      "inches": 157.5,
+      "actualInches": 157.49999996,
+      "from": 61.083333333333336,
+      "to": 74.20833333,
+      "pass": true
+    },
+    {
+      "name": "Bedroom 3 depth",
+      "axis": "z",
+      "x": 67,
+      "z": 30,
+      "inches": 166.5,
+      "actualInches": 166.49999996000003,
+      "from": 24.16666667,
+      "to": 38.04166666666667,
+      "pass": true
+    },
+    {
+      "name": "Bedroom 3 closet width",
+      "axis": "x",
+      "x": 59.5,
+      "z": 33,
+      "inches": 26,
+      "actualInches": 25.99999999999997,
+      "from": 58.625,
+      "to": 60.791666666666664,
+      "pass": true
+    },
+    {
+      "name": "Mechanical width",
+      "axis": "x",
+      "x": 4,
+      "z": 46,
+      "inches": 79,
+      "actualInches": 79.00000007999999,
+      "from": 1.45833333,
+      "to": 8.04166667,
+      "pass": true
+    },
+    {
+      "name": "Storage width",
+      "axis": "x",
+      "x": 13,
+      "z": 46,
+      "inches": 111.5,
+      "actualInches": 111.50000004,
+      "from": 8.33333333,
+      "to": 17.625,
+      "pass": true
+    },
+    {
+      "name": "Storage depth",
+      "axis": "z",
+      "x": 13,
+      "z": 46,
+      "inches": 37,
+      "actualInches": 36.999999960000025,
+      "from": 44.16666667,
+      "to": 47.25,
+      "pass": true
+    },
+    {
+      "name": "Garage width at returns",
+      "axis": "x",
+      "x": 20,
+      "z": 48.8,
+      "inches": 367,
+      "actualInches": 367.00000008,
+      "from": 1.45833333,
+      "to": 32.04166667,
+      "pass": true
+    },
+    {
+      "name": "Garage depth behind storage",
+      "axis": "z",
+      "x": 10.5,
+      "z": 60,
+      "inches": 305,
+      "actualInches": 304.99999995999997,
+      "from": 47.54166666666667,
+      "to": 72.95833333,
+      "pass": true
+    }
+  ],
+  "openings": [
+    {
+      "id": "entry",
+      "tag": "2670SL-3070DR-2670SL",
+      "widthInches": 96,
+      "heightInches": 84,
+      "pass": true
+    },
+    {
+      "id": "patio-slider",
+      "tag": "16070DR",
+      "widthInches": 192,
+      "heightInches": 84,
+      "pass": true
+    },
+    {
+      "id": "great-hall",
+      "tag": "3068",
+      "widthInches": 36,
+      "heightInches": 80,
+      "pass": true
+    },
+    {
+      "id": "kitchen-hall",
+      "tag": "3068",
+      "widthInches": 36,
+      "heightInches": 80,
+      "pass": true
+    },
+    {
+      "id": "mechanical",
+      "tag": "3068",
+      "widthInches": 36,
+      "heightInches": 80,
+      "pass": true
+    },
+    {
+      "id": "entry-great",
+      "tag": "8868",
+      "widthInches": 104,
+      "heightInches": 80,
+      "pass": true
+    },
+    {
+      "id": "garage-house",
+      "tag": "2868",
+      "widthInches": 32,
+      "heightInches": 80,
+      "pass": true
+    },
+    {
+      "id": "primary-bedroom",
+      "tag": "2868",
+      "widthInches": 32,
+      "heightInches": 80,
+      "pass": true
+    },
+    {
+      "id": "primary-bath",
+      "tag": "2868",
+      "widthInches": 32,
+      "heightInches": 80,
+      "pass": true
+    },
+    {
+      "id": "primary-rear-closet",
+      "tag": "2868",
+      "widthInches": 32,
+      "heightInches": 80,
+      "pass": true
+    },
+    {
+      "id": "bedroom-2",
+      "tag": "2868",
+      "widthInches": 32,
+      "heightInches": 80,
+      "pass": true
+    },
+    {
+      "id": "bedroom-3",
+      "tag": "2868",
+      "widthInches": 32,
+      "heightInches": 80,
+      "pass": true
+    },
+    {
+      "id": "powder",
+      "tag": "2868",
+      "widthInches": 32,
+      "heightInches": 80,
+      "pass": true
+    },
+    {
+      "id": "laundry",
+      "tag": "2868",
+      "widthInches": 32,
+      "heightInches": 80,
+      "pass": true
+    },
+    {
+      "id": "primary-dressing",
+      "tag": "2668",
+      "widthInches": 30,
+      "heightInches": 80,
+      "pass": true
+    },
+    {
+      "id": "primary-wc",
+      "tag": "2668",
+      "widthInches": 30,
+      "heightInches": 80,
+      "pass": true
+    },
+    {
+      "id": "primary-linen",
+      "tag": "2668",
+      "widthInches": 30,
+      "heightInches": 80,
+      "pass": true
+    },
+    {
+      "id": "office-closet",
+      "tag": "2668",
+      "widthInches": 30,
+      "heightInches": 80,
+      "pass": true
+    },
+    {
+      "id": "entry-closet",
+      "tag": "2668",
+      "widthInches": 30,
+      "heightInches": 80,
+      "pass": true
+    },
+    {
+      "id": "bath-2",
+      "tag": "2668",
+      "widthInches": 30,
+      "heightInches": 80,
+      "pass": true
+    },
+    {
+      "id": "bath-3",
+      "tag": "2668",
+      "widthInches": 30,
+      "heightInches": 80,
+      "pass": true
+    },
+    {
+      "id": "bedroom-2-closet",
+      "tag": "6068",
+      "widthInches": 72,
+      "heightInches": 80,
+      "pass": true
+    },
+    {
+      "id": "bedroom-3-closet",
+      "tag": "6068",
+      "widthInches": 72,
+      "heightInches": 80,
+      "pass": true
+    },
+    {
+      "id": "storage",
+      "tag": "6068",
+      "widthInches": 72,
+      "heightInches": 80,
+      "pass": true
+    },
+    {
+      "id": "office",
+      "tag": "5068",
+      "widthInches": 60,
+      "heightInches": 80,
+      "pass": true
+    },
+    {
+      "id": "hall-linen-2",
+      "tag": "4068",
+      "widthInches": 48,
+      "heightInches": 80,
+      "pass": true
+    },
+    {
+      "id": "hall-linen-3",
+      "tag": "4068",
+      "widthInches": 48,
+      "heightInches": 80,
+      "pass": true
+    },
+    {
+      "id": "laundry-closet",
+      "tag": "4068",
+      "widthInches": 48,
+      "heightInches": 80,
+      "pass": true
+    },
+    {
+      "id": "pantry",
+      "tag": "2868 POCKET",
+      "widthInches": 32,
+      "heightInches": 80,
+      "pass": true
+    },
+    {
+      "id": "garage-side",
+      "tag": "3068DR",
+      "widthInches": 36,
+      "heightInches": 80,
+      "pass": true
+    },
+    {
+      "id": "garage-1",
+      "tag": "9080 OH",
+      "widthInches": 108,
+      "heightInches": 96,
+      "pass": true
+    },
+    {
+      "id": "garage-2",
+      "tag": "9080 OH",
+      "widthInches": 108,
+      "heightInches": 96,
+      "pass": true
+    },
+    {
+      "id": "primary-window",
+      "tag": "9054TC",
+      "widthInches": 108,
+      "heightInches": 64,
+      "pass": true
+    },
+    {
+      "id": "breakfast-window",
+      "tag": "9054TC",
+      "widthInches": 108,
+      "heightInches": 64,
+      "pass": true
+    },
+    {
+      "id": "bed2-rear",
+      "tag": "9054TC",
+      "widthInches": 108,
+      "heightInches": 64,
+      "pass": true
+    },
+    {
+      "id": "breakfast-side",
+      "tag": "6054DC",
+      "widthInches": 72,
+      "heightInches": 64,
+      "pass": true
+    },
+    {
+      "id": "office-front",
+      "tag": "5648DC",
+      "widthInches": 66,
+      "heightInches": 56,
+      "pass": true
+    },
+    {
+      "id": "bed3-front",
+      "tag": "6650DC",
+      "widthInches": 78,
+      "heightInches": 60,
+      "pass": true
+    },
+    {
+      "id": "garage-front",
+      "tag": "6650DC",
+      "widthInches": 78,
+      "heightInches": 60,
+      "pass": true
+    },
+    {
+      "id": "bed2-side",
+      "tag": "2430SC",
+      "widthInches": 28,
+      "heightInches": 36,
+      "pass": true
+    },
+    {
+      "id": "bath2-side",
+      "tag": "2026SC",
+      "widthInches": 24,
+      "heightInches": 30,
+      "pass": true
+    },
+    {
+      "id": "bath3-side",
+      "tag": "2026SC",
+      "widthInches": 24,
+      "heightInches": 30,
+      "pass": true
+    },
+    {
+      "id": "bed2-upper",
+      "tag": "2026SC",
+      "widthInches": 24,
+      "heightInches": 30,
+      "pass": true
+    },
+    {
+      "id": "office-upper",
+      "tag": "2026SC",
+      "widthInches": 24,
+      "heightInches": 30,
+      "pass": true
+    },
+    {
+      "id": "bath-upper",
+      "tag": "2026SC",
+      "widthInches": 24,
+      "heightInches": 30,
+      "pass": true
+    },
+    {
+      "id": "bed3-side",
+      "tag": "2434SC",
+      "widthInches": 28,
+      "heightInches": 40,
+      "pass": true
+    },
+    {
+      "id": "primary-bath-window",
+      "tag": "5028AW",
+      "widthInches": 60,
+      "heightInches": 32,
+      "pass": true
+    },
+    {
+      "id": "laundry-window",
+      "tag": "4048DC",
+      "widthInches": 48,
+      "heightInches": 56,
+      "pass": true
+    },
+    {
+      "id": "garage-side-1",
+      "tag": "4020AW",
+      "widthInches": 48,
+      "heightInches": 24,
+      "pass": true
+    },
+    {
+      "id": "garage-side-2",
+      "tag": "4020AW",
+      "widthInches": 48,
+      "heightInches": 24,
+      "pass": true
+    },
+    {
+      "id": "patio-transom",
+      "tag": "16030T",
+      "widthInches": 192,
+      "heightInches": 36,
+      "pass": true
+    },
+    {
+      "id": "bed3-upper",
+      "tag": "6024AW",
+      "widthInches": 72,
+      "heightInches": 28,
+      "pass": true
+    },
+    {
+      "id": "garage-front-upper",
+      "tag": "6024AW",
+      "widthInches": 72,
+      "heightInches": 28,
+      "pass": true
+    },
+    {
+      "id": "garage-dormer-1",
+      "tag": "6024AW",
+      "widthInches": 72,
+      "heightInches": 28,
+      "pass": true
+    },
+    {
+      "id": "garage-dormer-2",
+      "tag": "6024AW",
+      "widthInches": 72,
+      "heightInches": 28,
+      "pass": true
+    }
+  ],
+  "footprint": [
+    {
+      "name": "Overall framing width",
+      "inches": 908,
+      "actualInches": 908,
+      "pass": true
+    },
+    {
+      "name": "Overall framing depth including garage bay",
+      "inches": 893,
+      "actualInches": 893,
+      "pass": true
+    }
+  ],
+  "pass": true
+}

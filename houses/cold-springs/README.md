@@ -34,7 +34,7 @@ then Import choices in the destination. Browser storage uses
 - Architectural PDF: `3 Cold Springs Rev1 10-28-26.pdf`, seven pages.
 - A-1, page 3: wall footprints, room arrangement and opening tags, 1/4 inch =
   1 foot (18 PDF points per foot). The PDF page rotation is 270 degrees.
-- A-1b, page 4: roof and ceiling slopes; standard plate 9 ft 1 1/8 inches.
+- A-1b, page 4: roof and ceiling slopes; plate 9 ft 1 1/8 inches above subfloor, not above finished floor.
 - A-3/A-4, pages 5–6: elevation form, glazing, porch and garage levels.
 - Structural PDF: `FINAL STRUCTURAL W CHIMNEY.pdf`, six sheets, dated
   October 12, 2026. S103 shows the chimney envelope as 4 × 8 ft; architectural
@@ -67,8 +67,9 @@ opening sizes and heights; detailed heads, joinery, vaulted ceiling transitions,
 roof intersections, garage slab slope, and dormer framing remain provisional.
 The main ceiling rises toward the A-1b ridge, using the noted 2.5:12 kitchen-side
 and 5:12 great-room-side slopes. Review against the missing section before
-treating that profile as approved. The garage is simplified to a floor 18 inches
-below the house, with three 6-inch steps matching the plan's schematic notation.
+treating that profile as approved. The garage slopes provisionally from elevation 6255.00 ft at the left wall
+to 6254.50 ft at the overhead doors. A-3 and A-4 conflict on the door elevation;
+this needs confirmation. The three approach risers follow the selected level.
 
 All floor, paint, cabinetry, furniture, decorative materials, and lighting
 are provisional spatial references. They are not client selections and inherit
@@ -92,3 +93,30 @@ Run `npm test` after geometry or navigation changes. Browser review must also
 check rendered plan fidelity, interior views, mobile controls, roof visibility,
 material editing, reference drawing, and export/import. Numerical tests alone
 cannot establish visual fidelity.
+
+## Dimensional review — November 4, 2026
+
+Open `dist/dimensional-review.html` for the complete checked-dimension table and
+unresolved items. This is a measured review, not a claim that every modeled
+detail is exact. The public page links the same report from Project notes.
+
+- 39 framing spans are measured from the actual model wall polygons; nominal
+  unit openings are restored as framing planes for these measurements.
+- 55 door/window tags and the overall 75 ft 8 in × 74 ft 5 in footprint are checked.
+- Source coordinates use 1/8-inch precision. Printed dimension chains control
+  the WC/dressing partition where the PDF vectors are about half an inch off.
+- Interior and exterior wall outlines represent framing, without an arbitrary
+  collision buffer in the rendered geometry. Finish build-ups remain unresolved.
+- `scripts/plan-dimensions.json` records independently transcribed A-1 dimensions.
+  `scripts/audit-dimensions.mjs` measures the model and builds the public report.
+- Tests reject a stretched model and missing upper glazing, verify every interior
+  door location is traversable, and construct the actual Three.js meshes to check
+  finite geometry, slab/camera agreement, and fixture bounding dimensions.
+
+Still required: A-2 schedules and section, confirmation of the conflicting garage
+levels and chimney sizes, the laundry-window tag/elevation discrepancy, roof
+heel/hip/dormer details, finish build-ups and final site grading. Window heads are
+scaled from A-3/A-4 where possible; they are not certified schedule values.
+
+To regenerate privately, use `python scripts/build-model.py --source /path/to/architectural.pdf`
+with PyMuPDF and Shapely. Do not put that PDF or generated private overlays in Git.

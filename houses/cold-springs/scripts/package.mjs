@@ -4,9 +4,11 @@ import {resolve,dirname} from 'node:path';
 import {fileURLToPath} from 'node:url';
 import {createHash} from 'node:crypto';
 import {zipFiles} from './zip.mjs';
+import {buildAudit} from './audit-dimensions.mjs';
 import {buildPlan} from './model-plan.mjs';
 const root=resolve(dirname(fileURLToPath(import.meta.url)),'..');
 await buildPlan(root);
+await buildAudit(root);
 const files={};
 const privatePath=path=>path.split('/').some(p=>p.startsWith('.')||['node_modules','source-plans','tmp','downloads'].includes(p))||/\.(pdf|png|jpe?g|webp)$/i.test(path);
 async function collect(dir){

@@ -20,7 +20,7 @@ const temp=await mkdtemp(resolve(tmpdir(),'cold-springs-handoff-'));
 try{
  for(const [p,data]of entries){const target=resolve(temp,p);await mkdir(dirname(target),{recursive:true});await writeFile(target,data);}
  const standalone=resolve(temp,'cold-springs');
- execFileSync(process.execPath,['tests/model.mjs'],{cwd:standalone,stdio:'pipe'});
+ for(const test of ['tests/dimensions.mjs','tests/model.mjs'])execFileSync(process.execPath,[test],{cwd:standalone,stdio:'pipe'});
  // A received handoff still builds without access to the parent repository or Python.
  await writeFile(resolve(standalone,'dist/private.pdf'),'private drawing sentinel');
  await writeFile(resolve(standalone,'dist/.env'),'private credential sentinel');
